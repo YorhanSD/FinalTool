@@ -1,0 +1,28 @@
+path: .
+
+train: images/train
+val: images/val
+
+names:
+  0: alicate_universal
+  1: chave_allen
+  2: chave_combinada
+  3: chave_philips
+  4: chave_de_fenda
+  5: trena
+  6: desencapador_de_fios
+  7: paquimetro
+  8: nível
+  9: bomba_de_ar
+  10: grifo
+  11: estilete
+  12: prensa_manual
+  13: crimpador
+  14: fita_isolante
+  15: jogo_de_chaves_allen
+  16: jogo_de_chaves_combinadas
+  17: marreta
+  18: martelo
+
+  #+ 36 de treinamento
+  #+ 16 de validação
