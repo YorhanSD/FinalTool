@@ -1,10 +1,13 @@
 
+import time
 from ultralytics import YOLO
 import cv2
 import numpy as np
 import unicodedata
 import textwrap
 from PIL import Image, ImageDraw, ImageFont
+import os
+from datetime import datetime
 
 # Endereço do último treinamento da IA
 
@@ -23,6 +26,14 @@ if not cap.isOpened():
     print("Erro: nao foi possivel abrir a câmera.")
     print("Verifique se sua câmera está conectada.")
     exit()
+    
+# Pasta para armazenar as capturas
+
+pasta_capturas = "Capturas"
+
+os.makedirs(pasta_capturas, exist_ok=True)
+
+contador_capturas = 0
 
 # Informações sobre as ferramentas
 
@@ -56,6 +67,7 @@ ferramentas = {
     },
 
     "chave_philips": {
+        
         "nome": "Chave Phillips",
         "finalidade": [
             "Apertar e soltar parafusos com encaixe em cruz."
@@ -302,6 +314,11 @@ except OSError:
 ultima_classe = None
 ultima_confianca = 0.0
 
+contador_capturas = 0
+
+mensagem_captura = ""
+tempo_mensagem = 0
+
 while True:
     ret, frame = cap.read()
 
@@ -334,7 +351,7 @@ while True:
         inicio_x:inicio_x + lado
     ]
 
-# Redimensiona para o tamanho desejado
+    # Redimensiona para o tamanho desejado
     camera = cv2.resize(camera, (864, 864))
 
     # Cria o painel lateral
@@ -482,6 +499,18 @@ while True:
             font=fonte_texto,
             fill=cinza
         )
+        
+    # Exibe mensagem de feedback durante 2 segundos
+    if time.time() < tempo_mensagem:
+
+        desenho.text(
+            
+            (20, 550),
+            mensagem_captura,
+            font=fonte_texto,
+            fill=verde
+            
+        )
 
     # Converte o painel para o formato de cor do OpenCV
     painel = cv2.cvtColor(
@@ -494,9 +523,30 @@ while True:
 
     cv2.imshow(janela, tela)
 
-    # Pressione Q para encerrar
-    if cv2.waitKey(1) & 0xFF == ord("q"):
-        break
+    tecla = cv2.waitKey(1)
 
-cap.release()
-cv2.destroyAllWindows()
+    if tecla != -1:
+        tecla = tecla & 0xFF
+
+    # Pressione C para capturar uma imagem
+    if tecla == ord("c"):
+
+        contador_capturas += 1
+
+        nome_arquivo = f"captura_{contador_capturas:03d}.jpg"
+
+        caminho = os.path.join(
+        pasta_capturas,
+        nome_arquivo
+        )
+
+        cv2.imwrite(caminho, frame)
+
+        print(f"Imagem salva: {caminho}")
+        
+        mensagem_captura = "Imagem capturada com sucesso!"
+        tempo_mensagem = time.time() + 2
+
+    # Pressione Q para encerrar
+    if tecla == ord("q") or tecla == ord("Q"):
+        break
