@@ -14,7 +14,7 @@ names:
   7: paquimetro
   8: nível
   9: bomba_de_ar
-  10: grifo
+  10: chave_inglesa
   11: estilete
   12: prensa_manual
   13: crimpador
@@ -23,6 +23,3 @@ names:
   16: jogo_de_chaves_combinadas
   17: marreta
   18: martelo
-
-  #+ 36 de treinamento
-  #+ 16 de validação
