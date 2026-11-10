@@ -9,3 +9,5 @@ Validação	52
 Pressione a tecla C
 
 Imagens são salvas na pasta captura ajudando no treinamento da IA.
+
+<img width="1920" height="1026" alt="prensa manual" src="https://github.com/user-attachments/assets/0d9ddd90-e2d8-4796-b091-4fe32fb846f7" />
