@@ -10,4 +10,10 @@ Pressione a tecla C
 
 Imagens são salvas na pasta captura ajudando no treinamento da IA.
 
+O sistema utiliza um modelo de detecção de objetos treinado com imagens de ferramentas, permitindo identificar diferentes classes, como martelo, marreta, alicate universal, chaves e trena.
+
+A aplicação integra YOLO, OpenCV e PIL para realizar a captura de vídeo, detecção dos objetos e exibição das informações em uma interface visual.
+
+Além do reconhecimento, o programa apresenta um painel informativo com três tópicos sobre cada ferramenta identificada:
+
 <img width="1920" height="1026" alt="prensa manual" src="https://github.com/user-attachments/assets/0d9ddd90-e2d8-4796-b091-4fe32fb846f7" />
