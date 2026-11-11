@@ -1,19 +1,27 @@
-# FinalTool
-Programa feito em python, utiliza a biblioteca YOLO para que possa reconhecer ferramentas por meio da webcan.
+<h1>FinalTool</h1>
 
-## Atualmente o projeto conta com um total de 285 imagens :
-Treinamento	233
-Validação	52
+<br>
 
-## Botão de captura de tela :
+<h2>Programa feito em python, utiliza a biblioteca YOLO para que possa reconhecer ferramentas por meio da webcan.</h2>
+
+<br>
+
+<h2>Atualmente o projeto conta com um total de 285 imagens :</h2>
+
+- Treinamento	233
+- Validação	52
+
+<h3>Botão de captura de tela :</h3>
 Pressione a tecla C
+<h3>Botão para fechar o programa :</h3>
+Pressione a tecla Q
 
-Imagens são salvas na pasta captura ajudando no treinamento da IA.
+Imagens são salvas na pasta captura, ajudando no treinamento da IA.
 
-O sistema utiliza um modelo de detecção de objetos treinado com imagens de ferramentas, permitindo identificar diferentes classes, como martelo, marreta, alicate universal, chaves e trena.
+O sistema utiliza um modelo de detecção de objetos treinado com imagens de ferramentas, permitindo identificar diferentes classes, como martelo, marreta, alicate universal, chaves, trena etc.
 
 A aplicação integra YOLO, OpenCV e PIL para realizar a captura de vídeo, detecção dos objetos e exibição das informações em uma interface visual.
 
-Além do reconhecimento, o programa apresenta um painel informativo com três tópicos sobre cada ferramenta identificada:
+Além do reconhecimento, o programa apresenta um painel informativo com cinco tópicos sobre cada ferramenta identificada:
 
 <img width="1920" height="1026" alt="prensa manual" src="https://github.com/user-attachments/assets/0d9ddd90-e2d8-4796-b091-4fe32fb846f7" />
