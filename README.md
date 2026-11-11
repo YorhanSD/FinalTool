@@ -22,8 +22,9 @@ Pressione a tecla C
 Pressione a tecla Q
 
 <br>
+<br>
 
-Imagens são salvas na pasta captura, ajudando no treinamento da IA.
+A Captura auxilia no treinamento da IA.
 
 O sistema utiliza um modelo de detecção de objetos treinado com imagens de ferramentas, permitindo identificar diferentes classes, como martelo, marreta, alicate universal, chaves, trena etc.
 
