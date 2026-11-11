@@ -2,7 +2,8 @@
 
 <br>
 
-<h2>Programa feito em python, utiliza a biblioteca YOLO para que possa reconhecer ferramentas por meio da webcan.</h2>
+<h2>Resumo</h2>
+<h3>Programa feito em python, utiliza a biblioteca YOLO para que possa reconhecer ferramentas por meio da webcan.</h3>
 
 <br>
 
@@ -11,12 +12,15 @@
 - Treinamento	233
 - Validação	52
 
+<br>
+
+<h2>Como Funciona ?</h2>
+
 <h3>Botão de captura de tela :</h3>
 Pressione a tecla C
 <h3>Botão para fechar o programa :</h3>
 Pressione a tecla Q
 
-<h2>Como Funciona? :</h2>
 Imagens são salvas na pasta captura, ajudando no treinamento da IA.
 
 O sistema utiliza um modelo de detecção de objetos treinado com imagens de ferramentas, permitindo identificar diferentes classes, como martelo, marreta, alicate universal, chaves, trena etc.
