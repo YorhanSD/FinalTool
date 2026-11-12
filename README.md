@@ -7,9 +7,9 @@
 
 <br>
 
-<h2>Atualmente o projeto conta com um total de 285 imagens :</h2>
+<h2>Atualmente o projeto conta com um total de 320 imagens :</h2>
 
-- Treinamento	233
+- Treinamento	268
 - Validação	52
 
 <br>
